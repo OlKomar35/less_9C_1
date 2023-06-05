@@ -5,3 +5,15 @@
 //N = 5 -> "5, 4, 3, 2, 1"
 //N = 8 -> "8, 7, 6, 5, 4, 3, 2, 1"
 
+void printNum(int n)
+{
+    if (n > 0)
+    {
+        Console.Write($"{n} ");
+        printNum(--n);
+    }
+}
+
+Console.Write("Введите n= ");
+int n = Convert.ToInt32(Console.ReadLine());
+printNum(n);
